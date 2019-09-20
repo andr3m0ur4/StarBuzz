@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/Xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>A Máquina de Grãos do StarBuzz</title>
+        <link href="starbuzz.css" rel="stylesheet" type="text/css"/>
+        <link href="styledform.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>                
+        
+        <h1>A Máquina de Grãos do StarBuzz</h1>
+        <h2>Complete o formulário a seguir e clique em "faça seu Pedido"</h2>
+
+        <form action="http://starbuzzcoffee.com/processorder.php" method="post">
+            <table>
+                <tr>
+                    <th>Escolha seus grãos:</th>
+                    <td>
+                        <select name="beans">
+                            <option value="House Blend">Mistura da Casa</option>
+                            <option value="Bolivia">Bolívia Supremo Cultivado na Sombra</option>
+                            <option value="Guatemala">Guatemala Orgânico</option>
+                            <option value="Kenia">Quênia</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Tipo:</th>
+                    <td>
+                        <input type="radio" name="beantype" value="whole" />Grão inteiro<br />
+                        <input type="radio" name="beantype" value="ground" checked="checked" />Moído
+                    </td>
+                </tr>
+                <tr>
+                    <th>Extras:</th>
+                    <td>
+                        <input type="checkbox" name="extras[ ]" value="giftwrap" />
+                        Embalagem para Presente<br />
+                        <input type="checkbox" name="extras[ ]" value="catalog" checked="checked" />
+                        Incluir Catálogo no Pedido
+                    </td>
+                </tr>
+                <tr>
+                    <th>Enviar para:</th>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>Nome:</td>
+                                <td><input type="text" name="name" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td>Endereço:</td>
+                                <td><input type="text" name="address" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td>Cidade:</td>
+                                <td><input type="text" name="city" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td>Estado:</td>
+                                <td><input type="text" name="state" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td>CEP:</td>
+                                <td><input type="text" name="zip" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td>Telefone:</td>
+                                <td><input type="text" name="phone" value="" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Comentários do cliente:</th>
+                    <td>
+                        <textarea name="comments" id="comments" rows="10" cols="48"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>
+                        <input type="submit" value="Pedido" />
+                    </td>
+                </tr>
+            </table>
+        </form>                
+        
+    </body>
+</html>
