@@ -1,28 +1,40 @@
-body{
-    background: #efe5d0 url(image/background.gif) top left;
-    font-family: Verdana, Helvetica, Arial, sans-serif;
-    margin: 20px;
+body {
+    
 }
-table{
+
+section#formulario {
+    display: table-cell;
+    font-size: 1.05em;
+    padding: 15px;
+    vertical-align: top;
+    background: #efe5d0 url(../image/background.gif) top left;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+
+table {
     border: thin dotted #7e7e7e;
     padding: 10px;
     background-color: #e1ceb8;
 }
-th{
+
+th {
     text-align: right;
     vertical-align: top;
     padding-right: 10px;
     padding-top: 2px;
 }
-td{
+
+td {
     vertical-align: top;
     padding-bottom: 15px;
 }
-table table{
+
+table table {
     border: none;
     padding: 0px;
 }
-table table td{
+
+table table td {
     text-align: right;
     padding-bottom: 0px;
 }

@@ -1,97 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8">
         <title>A Máquina de Grãos do StarBuzz</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Site criado no curso de HTML com CSS" />
+        <meta name="description" content="Site criado no curso de HTML com CSS">
         <meta name="keywords" content="curso html css site café">
         <meta name="autor" content="André Moura">
-        <link href="starbuzz.css" rel="stylesheet" type="text/css"/>
-        <link href="styledform.css" rel="stylesheet" type="text/css"/>
+        <link href="css/starbuzz.css" rel="stylesheet" type="text/css">
+        <link href="css/styledform.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        
-        <h1>A Máquina de Grãos do StarBuzz</h1>
-        <h2>Complete o formulário a seguir e clique em "faça seu Pedido"</h2>
 
-        <form action="processorder.php" method="post">
-            <table>
-                <tr>
-                    <th>Escolha seus grãos:</th>
-                    <td>
-                        <select name="beans">
-                            <option value="Mistura da Casa">Mistura da Casa</option>
-                            <option value="Bolívia Supremo Cultivado na Sombra">
-                                Bolívia Supremo Cultivado na Sombra
-                            </option>
-                            <option value="Guatemala Orgânico">Guatemala Orgânico</option>
-                            <option value="Quênia">Quênia</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <th>Tipo:</th>
-                    <td>
-                        <input type="radio" name="beantype" value="grão inteiro" />Grão inteiro<br />
-                        <input type="radio" name="beantype" value="moído" checked="checked" />Moído
-                    </td>
-                </tr>
-                <tr>
-                    <th>Extras:</th>
-                    <td>
-                        <input type="checkbox" name="extras[ ]" value="Embalagem para Presente" />
-                        Embalagem para Presente<br />
-                        <input type="checkbox" name="extras[ ]" value="Catálogo" checked="checked" />
-                        Incluir Catálogo no Pedido
-                    </td>
-                </tr>
-                <tr>
-                    <th>Enviar para:</th>
-                    <td>
+        <header class="top">
+            <img id="cabecalhoLogo" src="image/headerLogo.gif" alt="Imagem do Logo Cabeçalho do Café StarBuzz">
+            <img id="cabecalhoSlogan" src="image/headerSlogan.gif" alt="Providenciando toda a cafeína que você precisa para energizar sua vida.">
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="#">INVENÇÕES</a></li>
+                <li><a href="#">RECEITAS</a></li>
+                <li class="selecionado"><a href="#">LOCALIZAÇÕES</a></li>
+            </ul>
+        </nav>
+
+        <main id="tabelaConteiner">
+            <div id="tabelaLinha">
+                <section id="drinks">
+                    <h1>BEBIDAS</h1>
+                    <p>Mistura da Casa, $1.49</p>
+                    <p>Café Arábico com Leite, $2.35</p>
+                    <p>Cappuccino, $1.89</p>
+                    <p>Chá Chai, $1.85</p>
+                    <h1>ELIXIRES</h1>
+                    <p>
+                        Nós orgulhosamente servimos elixires comprados de
+                        nossos amigos do Bar Use a Cabeça.
+                    </p>
+                    <p>Chá Verde Cooler, $2.99</p>
+                    <p>Framboesa Geladinha, $2.99</p>
+                    <p>Elixir da Felicidade, $2.99</p>
+                    <p>Explosão Anti-oxidante de Oxicoco, $2.99</p>
+                    <p>Chá de Resfriamento, $2.99</p>
+                    <p>Bebida Negra do Cérebro, $2.99</p>
+                </section>
+                
+                <section id="formulario">
+        
+                    <h1>A Máquina de Grãos do StarBuzz</h1>
+                    <h2>Complete o formulário a seguir e clique em "faça seu Pedido"</h2>
+
+                    <form action="processorder.php" method="post">
                         <table>
                             <tr>
-                                <td>Nome:</td>
-                                <td><input type="text" name="name" value="" /></td>
+                                <th>Escolha seus grãos:</th>
+                                <td>
+                                    <select name="beans">
+                                        <option value="Mistura da Casa">Mistura da Casa</option>
+                                        <option value="Bolívia Supremo Cultivado na Sombra">
+                                            Bolívia Supremo Cultivado na Sombra
+                                        </option>
+                                        <option value="Guatemala Orgânico">Guatemala Orgânico</option>
+                                        <option value="Quênia">Quênia</option>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
-                                <td>Endereço:</td>
-                                <td><input type="text" name="address" value="" /></td>
+                                <th>Tipo:</th>
+                                <td>
+                                    <input type="radio" name="beantype" value="grão inteiro">Grão inteiro<br>
+                                    <input type="radio" name="beantype" value="moído" checked="checked">Moído
+                                </td>
                             </tr>
                             <tr>
-                                <td>Cidade:</td>
-                                <td><input type="text" name="city" value="" /></td>
+                                <th>Extras:</th>
+                                <td>
+                                    <input type="checkbox" name="extras[ ]" value="Embalagem para Presente">
+                                    Embalagem para Presente<br>
+                                    <input type="checkbox" name="extras[ ]" value="Catálogo" checked="checked">
+                                    Incluir Catálogo no Pedido
+                                </td>
                             </tr>
                             <tr>
-                                <td>Estado:</td>
-                                <td><input type="text" name="state" value="" /></td>
+                                <th>Enviar para:</th>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td>Nome:</td>
+                                            <td><input type="text" name="name" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Endereço:</td>
+                                            <td><input type="text" name="address" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cidade:</td>
+                                            <td><input type="text" name="city" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Estado:</td>
+                                            <td><input type="text" name="state" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>CEP:</td>
+                                            <td><input type="text" name="zip" value=""></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Telefone:</td>
+                                            <td><input type="text" name="phone" value=""></td>
+                                        </tr>
+                                    </table>
+                                </td>
                             </tr>
                             <tr>
-                                <td>CEP:</td>
-                                <td><input type="text" name="zip" value="" /></td>
+                                <th>Comentários do cliente:</th>
+                                <td>
+                                    <textarea name="comments" id="comments" rows="10" cols="48"></textarea>
+                                </td>
                             </tr>
                             <tr>
-                                <td>Telefone:</td>
-                                <td><input type="text" name="phone" value="" /></td>
+                                <th></th>
+                                <td>
+                                    <input type="submit" value="Pedido">
+                                </td>
                             </tr>
                         </table>
-                    </td>
-                </tr>
-                <tr>
-                    <th>Comentários do cliente:</th>
-                    <td>
-                        <textarea name="comments" id="comments" rows="10" cols="48"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <th></th>
-                    <td>
-                        <input type="submit" value="Pedido" />
-                    </td>
-                </tr>
-            </table>
-        </form>                
+                    </form>
+                </section>
+                
+            </div>
+        </main>
+
+        <footer>
+            &copy; 2019 Café StarBuzz
+            <br>
+            Todas a marcas e marcas registradas que aparecem nesse site pertencem a seus
+            respectivos proprietários.
+        </footer>
         
     </body>
 </html>
